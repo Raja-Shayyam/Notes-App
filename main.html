@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Naap-plzz</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo_container">
+      <a href="#"><img class="myntra_home" src="Notes/main.png" alt="Myntra Home">
+      </a>
+    </div>
+    <div class="search_bar">
+      <span class="material-symbols-outlined search_icon">🔎</span>
+      <input class="search_input" placeholder="Search for products, brands and more">
+    </div>
+    <div class="action_bar">
+      <a href="main.html" class="my-home">
+        <div class="action_container">
+          <span class="action_icon">💒
+            <!--  -->
+          </span>
+          <span class="action_name">Home</span>
+        </div>
+      </a>
+      <div class="action_container" onclick="myProfilePage()">
+        <span class=" action_icon">👨🏻‍💼
+          <!-- person -->
+        </span>
+        <span class="action_name">Profile</span>
+      </div>
+    </div>
+  </header>
+  <main class=" main-window">
+    <div class="main-div">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ad, repudiandae eligendi sequi nobis consectetur
+        provident delectus alias, quisquam, tempora enim! Laboriosam nesciunt quo eveniet, nihil harum repellat
+        accusamus voluptatem.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quam assumenda esse necessitatibus beatae,
+        aspernatur placeat veritatis expedita ab voluptates! Minus, animi repellat. Accusantium natus libero, architecto
+        nulla nostrum minus.
+      </p>
+
+      <Doc>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae enim pariatur quo iste error suscipit illum
+        quaerat, fugiat ut quibusdam dignissimos numquam explicabo culpa repellendus fugit quisquam quod dolores sed!
+      </Doc>
+
+    </div>
+    <div id="side-bar">
+      <div onclick="popuP();">
+        <li>My Notes</li>
+        <li>My to-do List</li>
+      </div>
+      <!-- home -->
+      <div id="for_login" style="visibility: hidden">
+        <div class="my-notes">
+          <a href="NOTES/notes.html" class="my-notes">My Notes</a>
+        </div>
+        <div class="my-todo-List">
+          <a href="TO-DO LIST/todo.html" class="my-todo-List">My to-do List</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="log_main.js"></script>
+<script src="main.js"></script>
+<script>
+
+  
+function popuP()
+{
+  alert('please signup your account'+'\n'+ 'Login if Already'+'\n\n'+`follow the link for Account <a href="LoGINs/loginS.html">Log-in</a>`);
+  if (confirm("Please sign up for your account. Do you want to log in now?")) {
+    window.location.href = "LoGINs/loginS.html";
+  }
+  
+}
+
+let forloginmain = document.querySelector('#for_login').style.visibility = localStorage.getItem('visibility of bar ')
+console.log(forloginmain);
+
+
+localStorage.setItem('visibility of bar ',"hidden");
+
+</script>
+</html>

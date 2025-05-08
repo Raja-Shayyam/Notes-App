@@ -1,0 +1,123 @@
+
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Assistant,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background-color:#4c106083;
+  /* box-sizing: border-box; */
+}
+header {
+  display: flex;
+  /* background-color: #ffffff; */
+  /* height: 80px; */
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b6b1b1;
+  background-color:#4c106083;
+}
+.myntra_home {
+  padding: 4px;
+  margin-top: 5px;
+  margin-right: 20px;
+  height: 45px;
+  border-radius: 5px;
+  border-style:outset;
+}
+.logo_container {
+  margin-left: 4%;
+}
+
+.search_bar {
+  height: 40px;
+  min-width: 280px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.search_icon {
+  box-sizing: content-box;
+  height: 20px;
+  padding: 10px;
+
+  background-color: #f5f5f6;
+  color: #282c3f;
+  font-weight: 300;
+  border-radius: 4px 0 0 4px;
+}
+.search_input {
+  color: #696e79;
+  background-color: #f5f5f6;
+  flex-grow: 1;
+  height: 38px;
+  border: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.action_bar {
+  display: flex;
+  min-width: 200px;
+  justify-content: space-evenly;
+}
+.action_bar .action_container{
+  cursor: pointer;
+}
+/* Hover... */
+.action_container:hover{
+  color: #f5f5f6;
+}
+
+.my-todo-List:hover{
+  color: rgba(120, 49, 99, 0.795);
+}
+.my-notes:hover{
+  color: rgba(120, 49, 99, 0.795);
+}
+/* .my-home:hover{
+  color: rgba(120, 49, 99, 0.795);
+} */
+
+
+.action_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* .action_container {
+  text-decoration:wavy;
+} */
+/* a.action_container:link {
+  color:black;
+} */
+.active{
+  display: block !important;
+}
+.main-window{
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  grid-template-rows: 100vh;
+}
+#side-bar{
+  visibility: hidden;
+  grid-column: 2;
+  padding: 8px;
+  background-color:thistle;
+}
+#side-bar .my-notes {
+  text-decoration: none;
+  line-height: 2;
+}
+.my-home{
+  text-decoration: none;
+  color: black;
+}
+.my-todo-List{
+  text-decoration: none;
+  line-height: 2;
+}
+
+.main-div{
+  padding: 20px;
+}

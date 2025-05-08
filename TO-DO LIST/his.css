@@ -1,0 +1,73 @@
+.container {
+  display: flex; /* To organize children properly */
+  flex-direction:column; /* Stack items vertically */
+  align-items: center;
+
+  position: relative;
+  width: 100%; /* Take full-width */
+  max-width:max-content; /* Optional: Limit the container width */
+  /* padding: 20px;  */
+  /* Add inner spacing */
+  /* margin: 0px 8px 0px 8px; */
+  margin: 0 auto;
+  /* overflow: hidden; */
+   /* Center the container horizontally */
+}
+
+
+
+.container .history-innerBox {
+  
+  /* visibility: hidden; Make it visible */
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  position:absolute;
+   /* Use relative positioning for dynamic height */
+  /* top: -300px; */
+  width: 100%; /* Ensure it spans its parent container's width */
+  height: auto; /* Automatically adjust height to content */
+  padding: 15px; /* Inner padding for spacing */
+  gap: 10px; /* Add space between inner elements */
+  background-color: rgb(245, 240, 240); /* Background color */
+  border: 1px solid #ddd; /* Optional: Add a border for distinction */
+  border-radius: 6px; /* Optional: Rounded corners */
+  z-index: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+}
+
+
+.Div{
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Spread items evenly */
+
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fafafa;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* A slight shadow */
+}
+.his-output-Box{
+  padding: 8px;
+  flex-grow: 1; /* Allow the task output to take available space */
+  margin-right: 10px; /* Space between task output and date */
+  width: 20%;
+  background-color: #ccc;
+}
+.his-date , .days{
+  padding: 2px;
+  background-color: cornsilk;
+  margin-right: 3px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.amPm-time{
+  
+  padding: 2px;
+  background-color: rgb(173, 169, 151);
+  margin-right: 3px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}

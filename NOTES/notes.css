@@ -1,0 +1,306 @@
+.main {
+  width: 500px; /*Adjust as needed*/
+  margin: 20px auto; /* Center the container */
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.img {
+  text-align: center; /* Center the image */
+  margin-bottom: 10px;
+}
+
+.img #label{
+  display: block;
+  font-family: Courier;
+  font-weight:bold;
+}
+
+.img img {
+  max-width: 10%; /* Make image responsive */
+  height: auto;
+}
+
+.btn {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.btn button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.created-notes {
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.created-notes .para {
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+  margin: 5px 0;
+}
+.notes-to-add{
+  display:flex;
+  justify-self:center;
+  padding: 15px;
+  margin-bottom: 8px;
+  border: 0.7px solid #4b514d;
+  margin-right: 10px;
+   resize: none; /*Disable resizing of the output element */
+}
+
+textarea{
+  font-family: 'Gill Sans','sans-serif';
+}
+
+.created-notes .notes-area{
+  flex-grow: 1;
+  padding: 15px;
+  border: 1px solid #4b514d;
+  margin-right: 10px;
+  resize: none; /*Disable resizing of the output element */
+}
+
+.created-notes .delete {
+  background-color: #f00;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* Optional: Add hover effect to the button */
+.btn button:hover, .created-notes .delete:hover{
+    opacity: 0.8;
+}
+
+/* main header */
+
+header {
+  display: flex;
+  /* background-color: #ffffff; */
+  /* height: 80px; */
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b6b1b1;
+  background-color:#4c106083;
+}
+.myntra_home {
+  padding: 4px;
+  margin-top: 5px;
+  margin-right: 20px;
+  height: 45px;
+  border-radius: 5px;
+  border-style:outset;
+}
+.logo_container {
+  margin-left: 4%;
+}
+
+.search_bar {
+  height: 40px;
+  min-width: 280px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.search_icon {
+  box-sizing: content-box;
+  height: 20px;
+  padding: 10px;
+
+  background-color: #f5f5f6;
+  color: #282c3f;
+  font-weight: 300;
+  border-radius: 4px 0 0 4px;
+}
+.search_input {
+  color: #696e79;
+  background-color: #f5f5f6;
+  flex-grow: 1;
+  height: 38px;
+  border: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.action_bar {
+  display: flex;
+  min-width: 200px;
+  justify-content: space-evenly;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.action_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.action_bar .action_container{
+  cursor: pointer;
+}
+/* Hover... */
+.action_container:hover{
+  color: #f5f5f6;
+}
+
+/* main header */
+.main-window{
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  /* grid-template-rows: 100vh; */
+}
+/* side bar */
+
+#side-bar{
+  visibility: hidden;
+  grid-column: 2;
+  padding: 8px;
+  background-color:thistle;
+}
+#side-bar .my-notes {
+  text-decoration: none;
+  line-height: 2;
+}
+.my-home{
+  text-decoration: none;
+  color: black;
+}
+.my-todo-List{
+  text-decoration: none;
+  line-height: 2;
+}
+
+/* .main-div{
+  padding: 20px;
+} */
+/* sidde bar */
+
+
+/*  createdNotes.innerHTML += 
+    `
+        <div class="para">
+          <textarea type="text" class="notesArea" cols="30" rows="5"></textarea>
+          <button class="delete" onclick="fun_delete(${createdNotes});">X</button>
+        </div>
+     
+    `;
+      finalCreatedNotes.appendChild(createdNotes); 
+      
+      
+      <!-- <div class="para">
+        <textarea type="text" class="notes-area" cols="30" rows="5">
+        </textarea>
+        <button class="delete" onclick="fun_delete();">X</button>
+      </div> -->
+
+      <!-- <input type="text" name="notes">
+        <button class="delete">X</button> -->
+
+
+         let j=0;
+  if(j!==0){
+    gettingFromStorage();
+    j=1
+  }
+      =================================================================================================
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My Notes</title>
+  <link rel="stylesheet" href="notes.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="img">
+      <img src="" alt="no img">
+    </div>
+    <div class="btn">
+      <button type="button" class="button">
+        Create notes
+      </button>
+    </div>
+    <div>
+      <textarea type="text" class="notes-to-add" cols="30" rows="2.5"></textarea>
+    </div>
+    <div class="created-notes">
+
+    </div>
+  </div>
+
+</body>
+<script>
+  let i =0;
+  i=localStorage.getItem('value of i');
+  let notesArea = document.querySelector('.notes-area');
+  let notestoAdd = document.querySelector('.notes-to-add');
+  let createdNotes = document.querySelector('.created-notes');
+  let Button = document.querySelector('button');
+  let NOTESarea = [];
+  let p = document.querySelector('.para');
+  let getITEM;
+
+  Button.addEventListener('click', () => {
+      let temp = 'pillo';
+      //createdNotes.innerHTML = ``;
+      console.log('badmashi');
+      NOTESarea.push(notestoAdd.value);
+      NOTESarea.forEach((notesArea, i) => {
+        const newHtml = document.createElement('div');
+        newHtml.classList.add('para');
+        console.log('salam ' + i);
+        newHtml.innerHTML = `
+          <textarea type="text" class="notes-area" cols="30" rows="5">${NOTESarea[i]}
+          </textarea>
+          <button class="delete" onclick="fun_delete();">X</button>
+        `;
+        createdNotes.appendChild(newHtml);
+        settingToStorage(i);
+        i++;
+  
+      });
+    notestoAdd.value = '';
+  });
+
+ 
+  function settingToStorage(i) {
+    localStorage.setItem(`notes`, JSON.stringify(NOTESarea));
+    localStorage.setItem( 'value of i', i);
+    //localStorage.setItem(`notes `, (createdNotes.innerHTML));
+  }
+
+  function gettingFromStorage() {
+    getITEM = JSON.parse(localStorage.getItem(`notes`,NOTESarea));
+    console.log('get item ka salam')
+    console.log(getITEM);
+    NOTESarea = getITEM;
+    console.log(NOTESarea);
+    createdNotes;
+    //if(NOTESarea.length !== 0)
+    //update();
+    // console.log(createdNotes.innerHTML)
+
+  }
+  gettingFromStorage();
+
+</script>
+
+</html>
+
+      */

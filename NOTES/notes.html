@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My Notes</title>
+  <link rel="stylesheet" href="notes.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo_container">
+      <a href="#"><img class="myntra_home" src="main.png" alt="Myntra Home">
+      </a>
+    </div>
+    <div class="search_bar">
+      <span class="material-symbols-outlined search_icon">🔎</span>
+      <input class="search_input" placeholder="Search for products, brands and more">
+    </div>
+    <div class="action_bar">
+      <a href="../main.html" class="my-home">
+        <div class="action_container">
+          <span class="action_icon">💒
+            <!--  -->
+          </span>
+          <span class="action_name">Home</span>
+        </div>
+      </a>
+      <div class="action_container" onclick="myProfilePage()">
+        <span class=" action_icon">👨🏻‍💼
+          <!-- person -->
+        </span>
+        <span class="action_name">Profile</span>
+      </div>
+    </div>
+  </header>
+<main class="main-window">
+  <div class="main">
+    <div class="img">
+      <img src="notes.png" alt="notes img">
+      <label id="label">My Notes</label>
+    </div>
+    <div class="btn">
+      <button type="button" class="button">
+        Create note
+      </button>
+    </div>
+    <div>
+      <textarea type="text" class="notes-to-add" cols="30" rows="2.5"></textarea>
+    </div>
+    <div class="created-notes">
+
+    </div>
+  </div>
+  <div id="side-bar">
+   <!-- home -->
+    <div class="my-notes">
+      <a href="notes.html" class="my-notes">My Notes</a>
+    </div>
+    <div class="my-todo-List">
+      <a href="../TO-DO LIST/todo.html" class="my-todo-List">My to-do List</a>
+    </div>
+  </div>
+</main>
+</body>
+<script src="../main.js"></script>
+<script>
+  let i =0;
+  i=localStorage.getItem('value of i');
+  let notesArea = document.querySelector('.notes-area');
+  let notestoAdd = document.querySelector('.notes-to-add');
+  let createdNotes = document.querySelector('.created-notes');
+  let Button = document.querySelector('button');
+  let NOTESarea = [];
+  let p = document.querySelector('.para');
+  let getITEM;
+
+  Button.addEventListener('click', () => {
+      let temp = 'pillo';
+      createdNotes.innerHTML = ``;
+      console.log('badmashi');
+      NOTESarea.push(notestoAdd.value);
+      fun();
+    notestoAdd.value = '';
+  });
+function fun()
+{
+  NOTESarea.forEach((notesArea, i) => {
+    const newHtml = document.createElement('div');
+    newHtml.classList.add('para');
+    console.log('salam ' + i);
+    newHtml.innerHTML = `
+      <textarea type="text" class="notes-area" cols="30" rows="5">${NOTESarea[i]}
+      </textarea>
+      <button class="delete" onclick="fun_delete(${i});">X</button>
+    `;
+    createdNotes.appendChild(newHtml);
+    settingToStorage(i);
+    i++;
+
+  });
+}
+function fun_delete(index) {
+  NOTESarea.splice(index, 1); // Remove the note from the array
+  settingToStorage();
+  createdNotes.innerHTML = ``;
+  gettingFromStorage();
+  //fun(); // Refresh the displayed notes
+}
+
+
+  function settingToStorage(i) {
+    console.log('===============\nsetting ka salam');
+    localStorage.setItem(`notes`, JSON.stringify(NOTESarea));
+    localStorage.setItem( 'value of i', i);
+    //localStorage.setItem(`notes `, (createdNotes.innerHTML));
+  }
+
+  function gettingFromStorage() {
+    getITEM = JSON.parse(localStorage.getItem(`notes`,NOTESarea));
+    console.log('----------------\nget item ka salam')
+    console.log(getITEM);
+    NOTESarea = getITEM; // imp!
+    console.log(NOTESarea);
+    fun();
+    createdNotes;
+    //if(NOTESarea.length !== 0)
+    //update();
+    // console.log(createdNotes.innerHTML)
+
+  }
+  if(i!=null){
+  gettingFromStorage();
+  }
+</script>
+
+</html>

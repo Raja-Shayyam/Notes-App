@@ -1,0 +1,265 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  /* padding: 20px; */
+  
+}
+
+.main-box {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 500px;
+  margin: 20px auto;
+  height:auto;
+}
+
+/* Heading Styles */
+.heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heading img {
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+  margin-right: 10px;
+}
+
+h3 {
+  margin: 0;
+  font-family: 'Courier New';
+}
+
+/* Setting Box Styles */
+.setting-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.input-it, .date-it, .colour-it {
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="date"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+input[type="color"]{
+  padding: 1.5px 4px  1.5px 4px ;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* Button Styles */
+.submit {
+  text-align: center; /* Center the button within the div */
+  margin-top: 10px; /* Add some space above the button */
+}
+
+button {
+  display: inline-block; /* Change to inline-block for better alignment */
+  padding: 10px 20px; /* Add horizontal padding for a better button size */
+  background-color: #28a745; /* Green background */
+  color: white; /* White text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Increase font size for better readability */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+button:hover {
+  background-color: #249c3e; /* Darker green on hover */
+  color: black;
+}
+
+.side-options{
+  display: flex;
+  justify-content:end;
+  margin: 5px;
+  font-family:Verdana;
+}
+.histry ,.tasks{
+  display: flex;
+  flex-direction: column;
+  margin: 4px;
+  padding-bottom: 2px;
+  font-size: 8px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 0.1px solid #666;
+}
+.histry img{
+  /* margin-left: 1px; */
+  height:35px;
+  width: 35px;
+}
+.tasks img{
+  /* margin-left: 2px; */
+  height:35px;
+  width: 35px;
+}
+
+.histry:hover , .tasks:hover{
+  transition:color 0.3s;
+  color: #923ba4f3;
+  border-bottom: 3px solid #923ba4f3;
+}
+
+/* Output Styles */
+.output {
+z-index: 0;
+  /*  */
+  /* visibility: visible; */
+  
+  position:relative;
+  height: auto; /* Automatically adjust height */
+  width: 450px; /* Adjust width to fit container */
+  padding: 15px; /* Add spacing */
+  margin-bottom: 10px; /* Add space below output */
+  border: 1px solid #ddd; /* Border to distinguish area */
+  border-radius: 8px; /* Smooth rounded edges */
+  background: #f0f0f0; /* Light-gray background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.output-innerbox {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Spread items evenly */
+z-index: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fafafa;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* A slight shadow */
+  transition: transform 0.2s ease; /* Add hover effects */
+}
+
+.output-innerbox:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+  background: #e9e9e9; /* Subtle color change on hover */
+}
+
+
+.output input[type="checkbox"] {
+  margin-right: 10px; /* Space between checkbox and task text */
+}
+
+.output-box {
+  padding: 8px;
+  flex-grow: 1; /* Allow the task output to take available space */
+  margin-right: 10px; /* Space between task output and date */
+  width: 25px;
+  background-color: #ddd;
+  border:transparent;
+}
+.NOTESactive{
+  text-decoration: line-through;
+}
+
+
+.date {
+  color: #666; /* Gray color for the date */
+  padding: 3px 10px 3px 10px;
+  background-color:#ddd;
+
+}
+
+.delet-btn {
+  /* flex-grow: 0.01px; */
+  color: red; /* Red color for the delete button */
+  cursor: pointer; /* Pointer cursor on hover */
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.Hover{
+ background-color: rgba(255, 0, 0, 0.838)  !important;
+
+}
+
+/* 999999999999999999999999999999999900000000000000 */
+
+
+
+
+
+
+/* header 
+
+header {
+  display: flex;
+  /* background-color: #ffffff; */
+  /* height: 80px; 
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b6b1b1;
+  background-color:#4c106083;
+}
+.myntra_home {
+  padding: 4px;
+  margin-top: 5px;
+  margin-right: 20px;
+  height: 45px;
+  border-radius: 5px;
+  border-style:outset;
+}
+.logo_container {
+  margin-left: 4%;
+}
+
+.search_bar {
+  height: 40px;
+  min-width: 280px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.search_icon {
+  box-sizing: content-box;
+  height: 20px;
+  padding: 10px;
+
+  background-color: #f5f5f6;
+  color: #282c3f;
+  font-weight: 300;
+  border-radius: 4px 0 0 4px;
+}
+.search_input {
+  color: #696e79;
+  background-color: #f5f5f6;
+  flex-grow: 1;
+  height: 38px;
+  border: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.action_bar {
+  display: flex;
+  min-width: 200px;
+  justify-content: space-evenly;
+}
+.action_bar .action_container{
+  cursor: pointer;
+}
+
+
+.action_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+ header */

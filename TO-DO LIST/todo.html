@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My to-do App</title>
+  <link rel="stylesheet" href="../main.css">
+  <link rel="stylesheet" href="his.css">
+  <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo_container">
+      <a href="#"><img class="myntra_home" src="../NOTES/main.png" alt="Myntra Home">
+      </a>
+    </div>
+    <div class="search_bar">
+      <span class="material-symbols-outlined search_icon">🔎</span>
+      <input class="search_input" placeholder="Search for products, brands and more">
+    </div>
+    <div class="action_bar">
+      <a href="../main.html" class="my-home">
+        <div class="action_container">
+          <span class="action_icon">💒
+            <!--  -->
+          </span>
+          <span class="action_name">Home</span>
+        </div>
+      </a>
+      <div class="action_container" onclick="myProfilePage()">
+        <span class=" action_icon">👨🏻‍💼
+          <!-- person -->
+        </span>
+        <span class="action_name">Profile</span>
+      </div>
+    </div>
+  </header>
+  <main class="main-window">
+    <!-- <div class="main"> -->
+    <div class="main-box">
+      <div class="heading">
+        <img src="../NOTES/notes.png" alt="img">
+        <h3>My to-do list</h3>
+      </div>
+      <div class="setting-box">
+        <div class="input-it">
+          <input type="text" placeholder="input your to-do task..." class="input-It">
+        </div>
+        <div class="date-it">
+          <label for="date">Date :</label>
+          <input type="date" class="date-It">
+        </div>
+        <div class="colour-it">
+          <label for="color">select colour :</label>
+          <input type="color" class="colour-It">
+        </div>
+        <div class="submit">
+          <button type="submit" class="sub-it">Set Task</button>
+        </div>
+        <div class="side-options">
+          <span class="histry" onclick="hist();">
+            <img src="img_his.png" alt="img">
+            <label for="histry">History</label>
+          </span>
+          <span class="tasks" onclick="
+            OUTPUT.style.display = 'block';
+            //OUTPUT.style.position = 'absolute';
+            historyInnerBox.style.display='none';
+            
+            ">
+            <img src="img_task.png" alt="img">
+            <label for="tasks">My Tasks</label>
+          </span>
+        </div>
+      </div>
+      <!-- container -->
+      <div class="container">
+        <div class="output"></div>
+      </div>
+      <div class="history-innerBox">
+          <!-- output-innerbox -->
+        </div>
+    </div>
+    <!-- <div class="main"></div> -->
+    <div id="side-bar">
+      <!-- home -->
+      <div class="my-notes">
+        <a href="../NOTES/notes.html" class="my-notes">My Notes</a>
+      </div>
+      <div class="my-todo-List">
+        <a href="todo.html" class="my-todo-List">My to-do List</a>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="../main.js"></script>
+<script src="todo.js"></script>
+<script src="his.js"></script>
+
+</html>
